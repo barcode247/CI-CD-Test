@@ -21,8 +21,9 @@ thirdEnvVar= 'THIRD_VAR'
                 environment name: 'run_test_only', value: 'yes'
             }
             steps{
-                sh 'Javac HelloWorld.java'
-                sh 'Java HelloWorld'
+                sh 'cd $WORKSPACE'
+                sh 'javac HelloWorld.java'
+                sh 'java HelloWorld'
             }
         }
 //5. demo parallel stage with script
