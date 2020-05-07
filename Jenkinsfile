@@ -21,7 +21,8 @@ thirdEnvVar= 'THIRD_VAR'
                 environment name: 'run_test_only', value: 'yes'
             }
             steps{
-                sh 'cd /CI-CD-Test/blob/master/HelloWorld.java'
+                sh 'Javac HelloWorld.java'
+                sh 'Java HelloWorld'
             }
         }
 //5. demo parallel stage with script
