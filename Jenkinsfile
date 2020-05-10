@@ -52,6 +52,7 @@ steps {
              }
         }
     }
+
 //6. post actions for success or failure of job. Commented out in the following code: Example on how to add a node where a stage is specifically executed. Also, PublishHTML is also a good plugin to expose Cucumber reports but we are using a plugin using Json.
    
 post {
@@ -88,3 +89,4 @@ echo "Test succeeded"
         }
 }
 }
+
