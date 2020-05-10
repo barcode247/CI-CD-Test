@@ -34,14 +34,9 @@ steps {
                   {
                   //running a script instead of DSL. In this case to run an if/else
                   script{
-                    if (env.run_test_only =='yes')
-                        {
-                        echo env.firstEnvVar
-                        }
-                    else
-                        {
-                        echo env.secondEnvVar
-                        }
+                    
+                        echo 'stage1'
+                       
                   }
          },
         "Parallel stage #2":{
