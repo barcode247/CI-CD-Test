@@ -16,10 +16,7 @@ pipeline {
 //4. Stages
     stages {
         stage('Test'){
-             //conditional for parameter
-            when {
-                environment name: 'run_test_only', value: 'yes'
-            }
+           
             steps{
                 sh '''cd $WORKSPACE  
                 sh javac HelloWorld.java
