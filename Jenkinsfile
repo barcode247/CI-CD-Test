@@ -22,7 +22,7 @@ pipeline {
             }
             steps{
                 sh '''cd $WORKSPACE
-		sh mv ~/projects/CI-CD-Test/HelloWorld.java .  
+		sh cd ~/projects/CI-CD-Test/HelloWorld.java .  
                 sh javac HelloWorld.java
                 sh java HelloWorld'''
             }
