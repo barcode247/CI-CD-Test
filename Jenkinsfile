@@ -21,8 +21,7 @@ pipeline {
                 environment name: 'run_test_only', value: 'yes'
             }
             steps{
-                sh '''cd $WORKSPACE
-		sh cd ~/projects/CI-CD-Test/HelloWorld.java .  
+                sh '''cd $WORKSPACE  
                 sh javac HelloWorld.java
                 sh java HelloWorld'''
             }
