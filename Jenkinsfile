@@ -45,7 +45,7 @@ steps {
                   }
          },
         "Parallel stage #2":{
-                echo "${thirdEnvVar}"
+                echo "stage2"
                 }
                 )
              }
