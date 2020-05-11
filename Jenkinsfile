@@ -18,8 +18,7 @@ pipeline {
         stage('Test'){
            
             steps{
-                bash '''
-		#!/bin/bash
+                bash '''#!/bin/bash
 		cd /var/lib/jenkins/workspace/Pipeline_Test/ 
                 javac HelloWorld.java
                 java HelloWorld
