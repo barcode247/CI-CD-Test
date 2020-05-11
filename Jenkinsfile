@@ -26,24 +26,24 @@ pipeline {
             }
         }
 //5. demo parallel stage with script
-        stage ('Run demo parallel stages') {
-steps {
-        parallel(
-        "Parallel stage #1":
-                  {
-                  //running a script instead of DSL. In this case to run an if/else
-                  script{
-                    
-                        echo 'stage1'
-                       
-                  }
-         },
-        "Parallel stage #2":{
-                echo "stage2"
-                }
-                )
-             }
-        }
+//        stage ('Run demo parallel stages') {
+//steps {
+//        parallel(
+//        "Parallel stage #1":
+//                  {
+//                  //running a script instead of DSL. In this case to run an if/else
+//                  script{
+//                    
+//                        echo 'stage1'
+//                       
+//                  }
+//         },
+//        "Parallel stage #2":{
+//                echo "stage2"
+//               }
+//                )
+        //     }
+       // }
     }
 
 }
