@@ -18,9 +18,12 @@ pipeline {
         stage('Test'){
            
             steps{
-                sh '''cd /var/lib/jenkins/workspace/Pipeline_Test/ 
-                sh javac HelloWorld.java
-                sssh java HelloWorld'''
+                bash '''
+		#!/bin/bash
+		cd /var/lib/jenkins/workspace/Pipeline_Test/ 
+                javac HelloWorld.java
+                java HelloWorld
+		'''
             }
         }
 //5. demo parallel stage with script
