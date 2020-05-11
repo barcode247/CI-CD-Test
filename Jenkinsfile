@@ -24,7 +24,7 @@ pipeline {
                 sh '''cd $WORKSPACE
 		sh mv ~/projects/CI-CD-Test/HelloWorld.java .  
                 sh javac HelloWorld.java
-                sh java HelloWorld'''
+                sssh java HelloWorld'''
             }
         }
 //5. demo parallel stage with script
