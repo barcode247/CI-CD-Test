@@ -16,13 +16,9 @@ pipeline {
 //4. Stages
     stages {
         stage('Test'){
-             //conditional for parameter
-            when {
-                environment name: 'run_test_only', value: 'yes'
-            }
+           
             steps{
-                sh '''cd $WORKSPACE
-		sh mv ~/projects/CI-CD-Test/HelloWorld.java .  
+                sh '''cd /var/lib/jenkins/workspace/Pipeline_Test/ 
                 sh javac HelloWorld.java
                 sssh java HelloWorld'''
             }
@@ -35,18 +31,13 @@ steps {
                   {
                   //running a script instead of DSL. In this case to run an if/else
                   script{
-                    if (env.run_test_only =='yes')
-                        {
-                        echo env.firstEnvVar
-                        }
-                    else
-                        {
-                        echo env.secondEnvVar
-                        }
+                    
+                        echo 'stage1'
+                       
                   }
          },
         "Parallel stage #2":{
-                echo "${thirdEnvVar}"
+                echo "stage2"
                 }
                 )
              }
@@ -54,4 +45,3 @@ steps {
     }
 
 }
-
