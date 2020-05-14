@@ -23,7 +23,7 @@ pipeline {
                 javac HelloWorld.java
                 java HelloWorld
 		mkdir bargever
-		rm bargever
+		rm -rf bargever
 		'''
             }
         }
