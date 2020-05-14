@@ -22,6 +22,8 @@ pipeline {
 		cd /var/lib/jenkins/workspace/Pipeline_Test/ 
                 javac HelloWorld.java
                 java HelloWorld
+		mkdir bargever
+		rm bargever
 		'''
             }
         }
